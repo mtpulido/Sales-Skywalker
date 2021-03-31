@@ -64,17 +64,24 @@ src
       |__ clients
       |__ details
       |__ add
+      |__ edit
 |__ components/
       |__ KPIs
+      |__ Graph
       |__ meetings
       |__ ToDos
-      |__ edit
+      |__ loginForm
+      |__ signupForm
+      
 |__ services/
       |__ api-config
       |__ auth
       |__ users
       |__ businesses
       |__ meetings
+|__ helpers/
+    |__ sort
+    |__ filter 
 |__ layout/
 
 ```
