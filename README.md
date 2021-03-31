@@ -2,7 +2,7 @@
 
 ## Overview
 
-_**Sales Skywalker**  an app built to mimic a company specific version of sales force. It helps sales reps see their key performance indicators, their performance to quota, and keep track of their prospects and clients for meeting organizaiton and easy to do items.
+**Sales Skywalker**  an app built to mimic a company specific version of sales force. It helps sales reps see their key performance indicators, their performance to quota, and keep track of their prospects and clients for meeting organizaiton and easy to do items.
 
 
 <br>
@@ -11,7 +11,7 @@ _**Sales Skywalker**  an app built to mimic a company specific version of sales 
 
 
 
-_The **Sales Skywalker** MVP 
+The **Sales Skywalker** MVP 
 <br>
 
 ### Goals
