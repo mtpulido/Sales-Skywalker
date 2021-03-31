@@ -11,7 +11,7 @@ _**Sales Skywalker**  an app built to mimic a company specific version of sales 
 
 
 
-_The **Project Title** MVP 
+_The **Sales Skywalker** MVP 
 <br>
 
 ### Goals
