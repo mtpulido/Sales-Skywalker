@@ -17,8 +17,8 @@ _The **Sales Skywalker** MVP
 ### Goals
 
 - Full Crud frontend and backend
-- _easy usability to drive sales rep behavior within the app
-- _include analytics dependant on user data
+- easy usability to drive sales rep behavior within the app
+- include analytics dependant on user data
 - implement a self built graph.
 
 <br>
