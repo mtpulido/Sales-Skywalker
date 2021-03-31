@@ -104,7 +104,8 @@ src
 | structure props and state |    H     |     3 hrs      |          |          |
 | grid/flexbox   |    H     |     5 hrs      |          |       |
 | basic styling/spacing |    H     |     6 hrs      |          |          |
-| TOTAL               |          |     34 hrs      |          |         |
+| graph   |    H     |     4 hrs      |          |       |
+| TOTAL               |          |     38 hrs      |          |         |
 
 
 <br>
