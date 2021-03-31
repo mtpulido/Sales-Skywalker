@@ -25,15 +25,15 @@ _The **Sales Skywalker** MVP
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | react |
 |   React Router   |for navigation|
 | axios | for api calls |
 |     rails      | for backend full crud |
-|  postresql |database |
+|  postgresql |database |
+|  jwt |for user  |
+|  bcrypt |user security |
 
 <br>
 
