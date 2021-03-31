@@ -88,8 +88,6 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | layout   |    H     |     2 hrs      |          |       |
@@ -130,8 +128,5 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
