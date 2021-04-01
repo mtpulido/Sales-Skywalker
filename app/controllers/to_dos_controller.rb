@@ -1,19 +1,19 @@
 class ToDosController < ApplicationController
+  before_action :authorize_request, only: [ :create, :index, :destroy ]
   before_action :set_to_do, only: [:show, :update, :destroy]
 
   # GET /to_dos
   def index
-    @to_dos = ToDo.all
-
-    render json: @to_dos
+    @to_dos = @current_user.to_dos.all
+    render json: @to_dos, include: {business: {only:[:name, :email, :phone_number]}}
   end
 
   # POST /to_dos
   def create
     @to_do = ToDo.new(to_do_params)
-
+    @to_do.user = @current_user
     if @to_do.save
-      render json: @to_do, status: :created, location: @to_do
+      render json: @to_do, status: :created, 
     else
       render json: @to_do.errors, status: :unprocessable_entity
     end

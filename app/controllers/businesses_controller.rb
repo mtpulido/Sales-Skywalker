@@ -20,7 +20,7 @@ class BusinessesController < ApplicationController
     @business = Business.new(business_params)
     @business.user = @current_user
     if @business.save
-      render json: @business, status: :created, location: @business
+      render json: @business, status: :created, 
     else
       render json: @business.errors, status: :unprocessable_entity
     end

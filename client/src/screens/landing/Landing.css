@@ -1,0 +1,82 @@
+.landing-container {
+  display: grid;
+  grid-template-areas: 
+  "L S"
+  "I V"
+  "U V";
+  width: 100vw;
+  height: 100vh;
+  background-color: #292929;
+}
+
+.landing-logo {
+grid-area: L;
+width: 25vw;
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: 2px solid white;
+border-right: 2px solid white;
+height: 15vh;
+font-size: 55px;
+color: white;
+background-color: #000000;
+}
+
+.sign-in-form {
+  grid-area: I;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 25vw;
+  height: 42.5vh;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  font-size: 20px;
+  color: white;
+
+}
+
+.sign-up-form {
+  grid-area: U;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 25vw;
+  height: 42.5vh;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  font-size: 20px;
+  color: white;
+
+}
+
+.landing-slogan {
+  grid-area: S;
+  font-size: 40px;
+  color: white;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+.landing-video {
+  display: flex;
+  justify-content: center;
+  grid-area: V;
+  margin-top: 30px;
+  width: 69vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-input {
+  height: 30px;
+}
+
+.landing-label {
+  font-size: 35px;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_193118) do
+ActiveRecord::Schema.define(version: 2021_03_31_204633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 2021_03_31_193118) do
 
   create_table "to_dos", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "businesses_id", null: false
+    t.bigint "business_id", null: false
     t.string "content"
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["businesses_id"], name: "index_to_dos_on_businesses_id"
+    t.index ["business_id"], name: "index_to_dos_on_business_id"
     t.index ["user_id"], name: "index_to_dos_on_user_id"
   end
 
@@ -52,6 +52,6 @@ ActiveRecord::Schema.define(version: 2021_03_31_193118) do
   end
 
   add_foreign_key "businesses", "users"
-  add_foreign_key "to_dos", "businesses", column: "businesses_id"
+  add_foreign_key "to_dos", "businesses"
   add_foreign_key "to_dos", "users"
 end
