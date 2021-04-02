@@ -1,19 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import "./Layout.css"
 
 const Layout = (props) => {
   return (
-    <div>
-    <div className="navigation-container">
-      <div className="navigation-company-user">
-        <div>Big Company</div>
-        <div>Name</div>
+    <div className="layout">
+      <div className="navigation-container">
+        <div className="navigation-company-user">
+          <div>Lots of Sales Inc.</div>
+          {props.currentUser ? <div>{props.currentUser.name}</div> : null}
+        </div>
+        <Link to="/dashboard">
+          <div className="navigation-dashboard">Dashboard</div>
+        </Link>
+        <Link to="/businesses">
+          <div className="navigation-propsects">Prospects</div>
+        </Link>
+        <Link to="/clients">
+          <div className="navigation-client">Clients</div>
+        </Link>
+        <div className="navigation-signout">Sign Out</div>
       </div>
-      <div className="navigation-dashboard">Dashboard</div>
-      <div className="navigation-propsects">Prospects</div>
-      <div className="navigation-client">Clients</div>
-      <div className="navigation-signout">Sign Out</div>
-      </div>
-      {props.children}
+      <div className="layout-children">{props.children}</div>
     </div>
   );
 };

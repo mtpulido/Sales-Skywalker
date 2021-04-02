@@ -1,6 +1,18 @@
 .navigation-container {
   height: 100vh;
-  width: 12vh;
+  width: 15vw;
   display: flex;
   flex-direction: column;
+  border: red 2px solid ;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
+.layout {
+  display: flex;
+}
+.layout-children {
+  border: green 5px solid;
+  width: 85vw;
+}
+

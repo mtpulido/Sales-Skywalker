@@ -5,7 +5,6 @@ class BusinessesController < ApplicationController
   # GET /businesses
   def index
     @businesses = Business.all
-
     render json: @businesses
   end
 
@@ -20,7 +19,7 @@ class BusinessesController < ApplicationController
     @business = Business.new(business_params)
     @business.user = @current_user
     if @business.save
-      render json: @business, status: :created, 
+      render json: @business, status: :created, location: @business
     else
       render json: @business.errors, status: :unprocessable_entity
     end

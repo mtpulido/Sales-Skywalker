@@ -48,11 +48,7 @@ function App() {
       </Route>
 
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
-        <Switch>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-        </Switch>
+        <MainContainer currentUser={currentUser}/>
       </Layout>
     </div>
   );
