@@ -36,10 +36,13 @@ const Details = (props) => {
         business_id: id,
         action: "Email",
       });
-    } else {
-      console.log("these aren't true!");
-    }
+    } 
   }, [id]);
+  console.log(oneBusiness)
+  console.log("id through busniess", oneBusiness?.user_id)
+  console.log("id through props", props.currentUser.id)
+
+  
 
   return (
     <div className="details-container">
@@ -77,7 +80,7 @@ const Details = (props) => {
         NOTES:
         <div>{oneBusiness?.notes}</div>
       </div>
-      <div className="details-buttons-container">
+      {props.currentUser.id === oneBusiness?.user_id ? <div className="details-buttons-container">
         <div className="details-buttons">Meeting</div>
         <div
           className="details-buttons"
@@ -96,8 +99,8 @@ const Details = (props) => {
         </Link>
         <div className="details-buttons" onClick={() => props.handleDelete(id)}>
           Delete
-        </div>
-      </div>
+        </div> 
+      </div> : null}
     </div>
   );
 };
