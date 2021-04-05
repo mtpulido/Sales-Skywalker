@@ -11,6 +11,6 @@ export const postToDo = async (toDoData) => {
 }
 
 export const destroyToDo = async (id) => {
-  const response = await api.delete(`/to_do/${id}`);
+  const response = await api.delete(`/to_dos/${id}`);
   return response;
 }

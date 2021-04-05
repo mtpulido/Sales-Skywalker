@@ -23,6 +23,7 @@ a {
   /* border: green 5px solid; */
   width: 80vw;
   background-color: #292929;
+  overflow-x: hidden;
    /* display: flex; */
   /* justify-content: center; 
   align-items: center;  */

@@ -32,6 +32,6 @@ class ToDosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def to_do_params
-      params.require(:to_do).permit(:user_id, :business_id)
+      params.require(:to_do).permit(:user_id, :business_id, :action)
     end
 end

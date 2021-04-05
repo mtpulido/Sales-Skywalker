@@ -1,0 +1,58 @@
+.each-todo {
+  border-bottom: 1px solid white;
+  display: grid;
+  grid-template-areas: 
+  "A D"
+  "B C";
+  height: 100px;
+  color: white;
+  font-size: 25px;
+  width: 45vw;
+}
+
+.todo-action {
+  grid-area: A;
+  padding-left: 10px;
+}
+
+.todo-business-name {
+  grid-area: B;
+  width: 24vw;
+  padding-left: 10px;
+}
+
+.todo-contact-info {
+  grid-area: C;
+  width: 20vw;
+}
+
+.delete-todo {
+  grid-area: D;
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.delete-todo:hover {
+  cursor: pointer;
+}
+
+.todo-container {
+  width: 45vw;
+  background-color: #000000;
+}
+
+.to-do-container-label {
+  height: 40px;
+  font-size: 25px;
+  color: white;
+  border-bottom: .5px solid grey;
+  padding-left: 10px;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+}

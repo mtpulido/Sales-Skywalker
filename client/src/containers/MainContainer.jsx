@@ -18,6 +18,7 @@ const MainContainer = (props) => {
   const [allBusinesses, setAllBusinesses] = useState([]);
   const [allToDos, setAllToDos] = useState([])
   const history = useHistory();
+  const [toggleFetch, setToggleFetch] = useState(false)
 
   useEffect(() => {
     const fetchBusinesses = async () => {
@@ -36,7 +37,7 @@ const MainContainer = (props) => {
     } else {
      return null
     }
-  }, [props.currentUser]);
+  }, [props.currentUser, toggleFetch]);
 
   const handleCreate = async (businessData) => {
     const newBusiness = await postBusiness(businessData);
@@ -67,6 +68,7 @@ const MainContainer = (props) => {
   const createToDo = async (toDoData) => {
     const newToDo = await postToDo(toDoData)
     setAllToDos((prevState) => [...prevState, newToDo])
+    setToggleFetch((curr) => !curr)
   }
 
   const deleteToDo = async (id) => {
@@ -80,7 +82,7 @@ const MainContainer = (props) => {
   return (
     <Switch>
       <Route path="/dashboard">
-        <Dashboard currentUser={props.currentUser} allToDos={allToDos}/>
+        <Dashboard currentUser={props.currentUser} allToDos={allToDos} deleteToDo={deleteToDo}/>
       </Route>
 
       <Route path="/clients">
