@@ -18,8 +18,7 @@ The **Sales Skywalker** MVP
 
 - Full Crud frontend and backend
 - easy usability to drive sales rep behavior within the app
-- include analytics dependant on user data
-- implement a self built graph.
+- have todo list to show action items for sales reps. 
 
 <br>
 
@@ -70,9 +69,7 @@ src
       |__ Graph
       |__ meetings
       |__ ToDos
-      |__ loginForm
-      |__ signupForm
-      
+      |__ business
 |__ services/
       |__ api-config
       |__ auth
@@ -119,10 +116,10 @@ src
 
 ## Post-MVP
 
--calendar view for each month and each week 
--concept of sales manager
--concept of multiple companies in the system
--
+-dashboard with analytics and graphs.
+-calendar view for each month and each week.
+-concept of sales manager.
+-concept of multiple companies in the system.
 
 ***
 

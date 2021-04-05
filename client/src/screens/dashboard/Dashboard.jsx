@@ -6,11 +6,13 @@ const Dashboard = (props) => {
   const toDoJSX = props.allToDos.map((toDo) => (
     <div className="each-todo">
       <div className="todo-action">{toDo.action}</div>
-      <div className="todo-business-name">{toDo.business.name}</div>
-      <div className="todo-contact-info">
-        {toDo.action === "Call"
-          ? toDo.business.phone_number
-          : toDo.business.email}
+      <div className="todo-business-info-container">
+        <div className="todo-business-name">{toDo.business.name},</div>
+        <div className="todo-contact-info">
+          {toDo.action === "Call"
+            ? toDo.business.phone_number
+            : toDo.business.email}
+        </div>
       </div>
       <div className="delete-todo" onClick={() => props.deleteToDo(toDo.id)}>
         X
