@@ -40,7 +40,7 @@ const MainContainer = (props) => {
         return business.id === Number(id) ? updatedBusiness : business;
       })
     );
-    history.push(`/businesses/:${id}`);
+    history.push(`/businesses/${id}`);
   };
 
   const handleDelete = async (id) => {
@@ -50,7 +50,7 @@ const MainContainer = (props) => {
         return business.id !== id;
       })
     );
-    history.push("/prospects");
+    history.push("/businesses");
   };
 
   return (

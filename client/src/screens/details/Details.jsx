@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getOneBusiness } from "../../services/businesses";
 import "./Details.css";
 
@@ -36,8 +36,8 @@ const Details = (props) => {
         <div className="details-buttons">Meeting</div>
         <div className="details-buttons">Call ToDo</div>
         <div className="details-buttons">Email ToDo</div>
-        <div className="details-buttons">Edit</div>
-        <div className="details-buttons">Delete</div>
+        <Link to={`/businesses/${id}/edit`}><div className="details-buttons">Edit</div></Link>
+        <div className="details-buttons" onClick={() => props.handleDelete(id)}>Delete</div>
       </div>
     </div>
   );

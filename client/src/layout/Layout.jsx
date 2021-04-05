@@ -15,9 +15,9 @@ const Layout = (props) => {
         <Link to="/businesses">
           <div className="navigation-prospects">Prospects</div>
         </Link>
-        <Link to="/clients">
+        {/* <Link to="/clients">
           <div className="navigation-client">Clients</div>
-        </Link>
+        </Link> */}
         <div className="navigation-signout">Sign Out</div>
       </div>
       <div className="layout-children">{props.children}</div>

@@ -1,0 +1,81 @@
+.form-edit-container{
+  display: grid;
+  grid-template-areas: 
+  "D D N"
+  "B B B";
+  width:80vw;
+  height: 100vh;
+  background-color: #000000;
+  filter: drop-shadow(0 0 5px rgb(90, 88, 88));
+  background-color: #000000;
+}
+
+.form-details-container {
+  grid-area: D;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 48vw;
+  height: 81vh;
+  /* padding-right: 200px; */
+}
+
+.edit-label {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #0083E3;
+}
+
+.edit-input {
+  margin-top: 50px;
+  width: 500px;
+  height: 40px;
+  /* margin-bottom: 10px; */
+  margin-right: 50px;
+  font-size: 18px;
+}
+
+.notes-container-edit {
+  grid-area: N;
+  width: 27vw;
+  height: 81vh;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 5px;
+}
+.edit-notes-input {
+  height: 77vh;
+  width: 27vw;
+  display: flex;
+  align-items: flex-start;
+}
+.notes-edit-label {
+  font-size: 20px;
+  color: #0083E3;
+  margin-bottom: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.add-button {
+  width: 150px;
+  color:white;
+  background-color: #0083E3;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
+
+.edit-button-container {
+  height: 45px;
+  width: 55vw;
+  display: flex;
+  justify-content: center;
+  grid-area: B;
+  margin-bottom: 50px;
+}

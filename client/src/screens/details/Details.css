@@ -48,6 +48,12 @@
   font-size: 20px;
 }
 
+.details-buttons:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: drop-shadow(0px 1px 1px white)
+}
+
 .details-businessinfo {
   height: 11%;
   font-size: 25px;
