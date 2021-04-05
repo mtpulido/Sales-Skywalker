@@ -2,9 +2,10 @@ import { Link } from "react-router-dom"
 import "./Business.css"
 
 const Business = (props) => {
+  console.log("this is props", props)
   return (
     <>
-      <Link className="business-prospects" to={`/businesses/${props.business._id}`}>
+      <Link className="business-prospects" to={`/businesses/${props.business.id}`}>
         <div className="name-prospects">{props.business.name}</div>
         <div className="contact-prospects">{props.business.contact}</div>
         <div className="phone-prospects">{props.business.phone_number}</div>

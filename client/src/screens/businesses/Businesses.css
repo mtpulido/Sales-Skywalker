@@ -1,1 +1,49 @@
+.businesses-container {
+  /* filter: drop-shadow(0 0 5px rgb(90, 88, 88)); */
+  margin-top: 10px;
+}
 
+.businesses-labels {
+display: flex;
+width: 80vw;
+padding-left: 10px;
+color: white;
+font: 15px;
+margin-bottom:2px;
+}
+
+.company-label {
+  width: 25%
+}
+
+.contact-label {
+  width: 17%
+}
+
+.phonenumber-label {
+  width: 13%
+}
+
+.email-label {
+  width: 22%
+}
+
+.industry-label {
+  width: 15%
+}
+
+.clientstatus-label {
+  width: 8%;
+}
+
+.businesses-filter {
+  display: flex;
+  align-items: center;
+}
+
+.add-business-button {
+  color: #0083E3;
+  font-size: 55px;
+  margin-left: 30px;
+  padding-bottom: 7px;
+}

@@ -9,7 +9,6 @@ import {
   removeToken,
 } from "./services/auth";
 import Landing from "./screens/landing/Landing";
-import Dashboard from "./screens/dashboard/Dashboard";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);

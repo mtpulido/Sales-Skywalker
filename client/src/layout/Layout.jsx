@@ -7,13 +7,13 @@ const Layout = (props) => {
       <div className="navigation-container">
         <div className="navigation-company-user">
           <div>Lots of Sales Inc.</div>
-          {props.currentUser ? <div>{props.currentUser.name}</div> : null}
+          {props.currentUser ? <div className='nav-name'>{props.currentUser.name}</div> : null}
         </div>
         <Link to="/dashboard">
           <div className="navigation-dashboard">Dashboard</div>
         </Link>
         <Link to="/businesses">
-          <div className="navigation-propsects">Prospects</div>
+          <div className="navigation-prospects">Prospects</div>
         </Link>
         <Link to="/clients">
           <div className="navigation-client">Clients</div>

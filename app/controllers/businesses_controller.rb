@@ -11,7 +11,7 @@ class BusinessesController < ApplicationController
   # GET /businesses/1
   def show
     @business = Business.find(params[:id])
-    render json: @business
+    render json: @business, include: {user: {only: :name}}
   end
 
   # POST /businesses

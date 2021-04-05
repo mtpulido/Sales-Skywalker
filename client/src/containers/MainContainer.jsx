@@ -62,7 +62,7 @@ const MainContainer = (props) => {
       <Route path="/clients">
         <Clients currentUser={props.currentUser} />
       </Route>
-      
+
       <Route path="/businesses/add">
         <Add handleCreate={handleCreate} />
       </Route>
@@ -76,7 +76,7 @@ const MainContainer = (props) => {
       </Route>
 
       <Route path="/businesses">
-        <Businesses allBusinesses={allBusinesses} />
+        {props.currentUser ? <Businesses allBusinesses={allBusinesses} /> : <div>loading </div> }
       </Route>
     </Switch>
   );

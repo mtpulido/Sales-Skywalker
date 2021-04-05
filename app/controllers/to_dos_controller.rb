@@ -5,7 +5,7 @@ class ToDosController < ApplicationController
   # GET /to_dos
   def index
     @to_dos = @current_user.to_dos.all
-    render json: @to_dos, include: {business: {only:[:name, :email, :phone_number]}}
+    render json: @to_dos, include: {business: { only:[:name, :email, :phone_number] }}
   end
 
   # POST /to_dos
