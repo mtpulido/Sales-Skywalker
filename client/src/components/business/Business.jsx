@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import "./Business.css"
 
 const Business = (props) => {
-  console.log("this is props", props)
   return (
     <>
       <Link className="business-prospects" to={`/businesses/${props.business.id}`}>

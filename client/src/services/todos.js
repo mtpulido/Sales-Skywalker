@@ -6,7 +6,7 @@ export const getAllToDos = async () => {
 }
 
 export const postToDo = async (toDoData) => {
-  const response = await api.post('/to_dos', { toDo : toDoData });
+  const response = await api.post('/to_dos', { to_do : toDoData });
   return response.data;
 }
 

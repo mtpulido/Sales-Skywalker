@@ -18,7 +18,7 @@ const Layout = (props) => {
         {/* <Link to="/clients">
           <div className="navigation-client">Clients</div>
         </Link> */}
-        <div className="navigation-signout">Sign Out</div>
+        <div className="navigation-signout" onClick={props.handleLogout}>Sign Out</div>
       </div>
       <div className="layout-children">{props.children}</div>
     </div>

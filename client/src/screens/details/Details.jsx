@@ -6,7 +6,17 @@ import "./Details.css";
 const Details = (props) => {
   const [oneBusiness, setOneBusiness] = useState(null);
   const { id } = useParams();
-  console.log(oneBusiness);
+
+  const [toDoCall, setToDoCall] = useState({
+    user_id: '',
+    business_id: '',
+    type: 'Call'
+  })
+  const [toDoEmail, setToDoEmail] = useState({
+    user_id: '',
+    business_id: '',
+    type: 'Email'
+  })
 
   useEffect(() => {
     const fetchOneBusiness = async () => {
@@ -14,7 +24,29 @@ const Details = (props) => {
       setOneBusiness(businessData);
     };
     fetchOneBusiness();
-  }, []);
+
+    if (props.currentUser) {
+      setToDoCall({
+        user_id: props.currentUser.id,
+        business_id: id,
+        type: 'Call'
+      })
+      setToDoEmail({
+        user_id: props.currentUser.id,
+        business_id: id,
+        type: 'Email'
+      })} else {
+      console.log("these aren't true!")
+      }
+    
+  }, [id]);
+
+  
+
+
+
+
+
 
   return (
     <div className="details-container">
@@ -34,8 +66,8 @@ const Details = (props) => {
       </div>
       <div className="details-buttons-container">
         <div className="details-buttons">Meeting</div>
-        <div className="details-buttons">Call ToDo</div>
-        <div className="details-buttons">Email ToDo</div>
+        <div className="details-buttons" onClick={() => props.createToDo(toDoCall)}>Call ToDo</div>
+        <div className="details-buttons" onClick={() => props.createToDo(toDoEmail)}>Email ToDo</div>
         <Link to={`/businesses/${id}/edit`}><div className="details-buttons">Edit</div></Link>
         <div className="details-buttons" onClick={() => props.handleDelete(id)}>Delete</div>
       </div>

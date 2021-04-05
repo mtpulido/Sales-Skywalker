@@ -28,7 +28,6 @@ a {
   align-items: center;  */
 }
 
-
 .navigation-company-user {
   border-bottom: 1px solid white;
   min-height: 100px;
@@ -65,4 +64,8 @@ a {
   margin: 0 0 15px 5px;
   font-size: 30px;
   color: #0083E3;
+}
+
+.navigation-signout:hover {
+  cursor: pointer;
 }

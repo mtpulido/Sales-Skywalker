@@ -5,7 +5,7 @@ class ToDosController < ApplicationController
   # GET /to_dos
   def index
     @to_dos = @current_user.to_dos.all
-    render json: @to_dos, include: {business: { only:[:name, :email, :phone_number] }}
+    render json: @to_dos, include: {business: { only: [:name, :email, :phone_number] }}
   end
 
   # POST /to_dos
@@ -13,7 +13,7 @@ class ToDosController < ApplicationController
     @to_do = ToDo.new(to_do_params)
     @to_do.user = @current_user
     if @to_do.save
-      render json: @to_do, status: :created, 
+      render json: @to_do, status: :created, location: @to_do
     else
       render json: @to_do.errors, status: :unprocessable_entity
     end
@@ -32,6 +32,6 @@ class ToDosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def to_do_params
-      params.require(:to_do).permit(:user_id, :businesses_id)
+      params.require(:to_do).permit(:user_id, :business_id)
     end
 end

@@ -6,6 +6,7 @@ import {
   putBusiness,
   destroyBusiness,
 } from "../services/businesses";
+import {getAllToDos, postToDo, destroyToDo} from "../services/todos"
 import Add from "../screens/add/Add";
 import Clients from "../screens/clients/Clients";
 import Dashboard from "../screens/dashboard/Dashboard";
@@ -15,8 +16,7 @@ import Businesses from "../screens/businesses/Businesses";
 
 const MainContainer = (props) => {
   const [allBusinesses, setAllBusinesses] = useState([]);
-  // const [queriedBusinesses, setQueriedSongs] = useState([])
-  // const [clients, setClients] = useState([])
+  const [allToDos, setAllToDos] = useState([])
   const history = useHistory();
 
   useEffect(() => {
@@ -25,7 +25,18 @@ const MainContainer = (props) => {
       setAllBusinesses(businessData);
     };
     fetchBusinesses();
-  }, []);
+
+
+    if (props.currentUser) {
+      const fetchToDos = async () => {
+        const toDosData = await getAllToDos()
+        setAllToDos(toDosData)
+      }
+      fetchToDos()
+    } else {
+     return null
+    }
+  }, [props.currentUser]);
 
   const handleCreate = async (businessData) => {
     const newBusiness = await postBusiness(businessData);
@@ -53,10 +64,23 @@ const MainContainer = (props) => {
     history.push("/businesses");
   };
 
+  const createToDo = async (toDoData) => {
+    const newToDo = await postToDo(toDoData)
+    setAllToDos((prevState) => [...prevState, newToDo])
+  }
+
+  const deleteToDo = async (id) => {
+    await destroyToDo(id)
+    setAllToDos((prevState) => 
+      prevState.filter((toDo) => {
+      return toDo.id !== id
+    }))
+  }
+
   return (
     <Switch>
       <Route path="/dashboard">
-        <Dashboard currentUser={props.currentUser} />
+        <Dashboard currentUser={props.currentUser} allToDos={allToDos}/>
       </Route>
 
       <Route path="/clients">
@@ -72,7 +96,7 @@ const MainContainer = (props) => {
       </Route>
 
       <Route path="/businesses/:id">
-        <Details allBusinesses={allBusinesses} handleDelete={handleDelete} />
+      {props.currentUser ? <Details allBusinesses={allBusinesses} handleDelete={handleDelete} createToDo={createToDo} currentUser={props.currentUser}/> : <div>loading </div> }
       </Route>
 
       <Route path="/businesses">
