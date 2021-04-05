@@ -30,7 +30,7 @@ const MainContainer = (props) => {
   const handleCreate = async (businessData) => {
     const newBusiness = await postBusiness(businessData);
     setAllBusinesses((prevState) => [...prevState, newBusiness]);
-    history.push(`/businesses/:${newBusiness.id}`);
+    history.push(`/businesses/${newBusiness.id}`);
   };
 
   const handleUpdate = async (id, businessData) => {

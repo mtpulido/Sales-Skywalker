@@ -1,0 +1,39 @@
+label {
+  color: white;
+}
+
+.form-add-container {
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  /* padding-left: 15px; */
+}
+
+.add-label {
+  /* height: 35px; */
+  margin-bottom: 10px;
+  width: 150px;
+  font-size: 20px;
+
+}
+
+.add-input {
+  height: 35px;
+  width: 300px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.add-button {
+  width: 150px;
+  color:white;
+  background-color: #0083E3;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
