@@ -8,7 +8,6 @@ import {
 } from "../services/businesses";
 import {getAllToDos, postToDo, destroyToDo} from "../services/todos"
 import Add from "../screens/add/Add";
-import Clients from "../screens/clients/Clients";
 import Dashboard from "../screens/dashboard/Dashboard";
 import Details from "../screens/details/Details";
 import Edit from "../screens/edit/Edit";
