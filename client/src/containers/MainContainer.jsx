@@ -21,13 +21,14 @@ const MainContainer = (props) => {
   const [toggleFetch, setToggleFetch] = useState(false)
 
   useEffect(() => {
-    const fetchBusinesses = async () => {
-      const businessData = await getAllBusinesses();
-      setAllBusinesses(businessData);
-    };
-    fetchBusinesses();
+      const fetchBusinesses = async () => {
+        const businessData = await getAllBusinesses();
+        setAllBusinesses(businessData);
+      };
+      fetchBusinesses();
+  }, [toggleFetch]);
 
-
+    useEffect(() => {
     if (props.currentUser) {
       const fetchToDos = async () => {
         const toDosData = await getAllToDos()
@@ -35,7 +36,7 @@ const MainContainer = (props) => {
       }
       fetchToDos()
     } else {
-     return null
+      return null
     }
   }, [props.currentUser, toggleFetch]);
 
@@ -62,7 +63,8 @@ const MainContainer = (props) => {
         return business.id !== id;
       })
     );
-    history.push("/businesses");
+    setToggleFetch((curr) => !curr)
+    history.push('/businesses')
   };
 
   const createToDo = async (toDoData) => {
@@ -80,30 +82,38 @@ const MainContainer = (props) => {
   }
 
   return (
-    // <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
+   
     <Switch>
-      <Route path="/dashboard">
-        <Dashboard currentUser={props.currentUser} allToDos={allToDos} deleteToDo={deleteToDo}/>
-      </Route>
-
-      <Route path="/clients">
-        <Clients currentUser={props.currentUser} />
-      </Route>
+  
+      <Route exact path="/dashboard">
+      <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
+          <Dashboard currentUser={props.currentUser} allToDos={allToDos} deleteToDo={deleteToDo} />
+          </Layout>
+        </Route>
+        
 
       <Route path="/businesses/add">
-        <Add handleCreate={handleCreate} />
+      <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
+          <Add handleCreate={handleCreate} />
+          </Layout>
       </Route>
 
       <Route path="/businesses/:id/edit">
+      <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
         <Edit allBusinesses={allBusinesses} handleUpdate={handleUpdate} />
+        </Layout>
       </Route>
 
       <Route path="/businesses/:id">
-      {props.currentUser ? <Details allBusinesses={allBusinesses} handleDelete={handleDelete} createToDo={createToDo} currentUser={props.currentUser}/> : <div>loading </div> }
+      <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
+      {props.currentUser ? <Details allBusinesses={allBusinesses} handleDelete={handleDelete} createToDo={createToDo} currentUser={props.currentUser} setToggleFetch={setToggleFetch}/> : <div>loading </div> }
+      </Layout>
       </Route>
 
       <Route path="/businesses">
-        {props.currentUser ? <Businesses allBusinesses={allBusinesses} /> : <div>loading </div> }
+      <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
+        {props.currentUser ? <Businesses allBusinesses={allBusinesses} /> : <div>loading </div>}
+        </Layout>
       </Route>
       </Switch>
       // </Layout>

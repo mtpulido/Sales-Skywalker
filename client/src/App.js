@@ -44,12 +44,11 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        {!currentUser ? <Landing handleSignUp={handleSignUp} handleSignIn={handleSignIn}/> : history.push('/dashboard')}
+          <Landing handleSignUp={handleSignUp} handleSignIn={handleSignIn} />
       </Route>
 
-      {currentUser ? <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <MainContainer currentUser={currentUser} handleLogout={handleLogout} />
-      </Layout> : <div>Sign-In to view this page</div>}
+    
 
       
     </div>
