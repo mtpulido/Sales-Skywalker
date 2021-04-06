@@ -42,7 +42,6 @@ function App() {
   };
 
   return (
-
     <div className="App">
       <Route exact path="/">
         {!currentUser ? <Landing handleSignUp={handleSignUp} handleSignIn={handleSignIn}/> : history.push('/dashboard')}
