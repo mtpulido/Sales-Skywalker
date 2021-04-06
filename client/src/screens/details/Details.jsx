@@ -37,10 +37,7 @@ const Details = (props) => {
         action: "Email",
       });
     } 
-  }, [id]);
-  console.log(oneBusiness)
-  console.log("id through busniess", oneBusiness?.user_id)
-  console.log("id through props", props.currentUser.id)
+  }, [id, props.currentUser]);
 
   
 

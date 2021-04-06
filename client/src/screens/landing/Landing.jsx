@@ -114,6 +114,7 @@ const Landing = (props) => {
         through and increase your sales numbers.
       </div>
       <iframe
+        title="landing player"
         className='landing-video'
         src="https://www.youtube.com/embed/iqyf-kJWwIg"
       ></iframe>

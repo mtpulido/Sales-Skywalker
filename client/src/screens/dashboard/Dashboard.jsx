@@ -1,4 +1,3 @@
-import { destroyToDo } from "../../services/todos";
 import "./Dashboard.css";
 
 const Dashboard = (props) => {
