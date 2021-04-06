@@ -42,14 +42,17 @@ function App() {
   };
 
   return (
+
     <div className="App">
       <Route exact path="/">
-        <Landing handleSignUp={handleSignUp} handleSignIn={handleSignIn} />
+        {!currentUser ? <Landing handleSignUp={handleSignUp} handleSignIn={handleSignIn}/> : history.push('/dashboard')}
       </Route>
 
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
-        <MainContainer currentUser={currentUser}/>
-      </Layout>
+      {currentUser ? <Layout currentUser={currentUser} handleLogout={handleLogout}>
+        <MainContainer currentUser={currentUser} handleLogout={handleLogout} />
+      </Layout> : <div>Sign-In to view this page</div>}
+
+      
     </div>
   );
 }

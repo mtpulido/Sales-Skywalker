@@ -7,6 +7,7 @@
   height: 100px;
   color: white;
   width: 45vw;
+  transition: 2s ease-in-out;
 }
 
 .todo-action {
@@ -56,6 +57,7 @@
 .todo-container {
   width: 45vw;
   background-color: #000000;
+  transition: 2s ease-in-out;
 }
 
 .to-do-container-label {

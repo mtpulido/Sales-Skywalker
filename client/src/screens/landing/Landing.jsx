@@ -40,7 +40,8 @@ const Landing = (props) => {
           props.handleSignIn(signInData);
         }}
       >
-        <div className="landing-label">Login</div>
+        <div className='sign-in-alignment'>
+        <div className="landing-label-signin">Login</div>
         <label>
           Email:
           <input
@@ -60,8 +61,9 @@ const Landing = (props) => {
             value={signInData.password}
             onChange={handleChangeSignIn}
           />
-        </label>
-        <button>Login</button>
+          </label>
+          </div>
+        <button className='landing-button'>Login</button>
       </form>
 
       <form
@@ -71,6 +73,7 @@ const Landing = (props) => {
           props.handleSignUp(signUpData);
         }}
       >
+        <div className='sign-in-alignment'>
         <div className="landing-label">Sign Up</div>
         <label>
           Name:
@@ -101,8 +104,9 @@ const Landing = (props) => {
             value={signUpData.password}
             onChange={handleChangeSignUp}
           />
-        </label>
-        <button>Sign Up</button>
+          </label>
+          </div>
+        <button className='landing-button'>Sign Up</button>
       </form>
 
       <div className="landing-slogan">

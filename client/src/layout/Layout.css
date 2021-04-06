@@ -60,8 +60,6 @@ a {
   height: 50px;
 }
 .navigation-signout {
-  position: sticky;
-  bottom: 0;
   padding-left: 10px;
   font-size: 30px;
   color: #0083E3;

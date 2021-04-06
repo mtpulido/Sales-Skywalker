@@ -13,6 +13,7 @@ import Dashboard from "../screens/dashboard/Dashboard";
 import Details from "../screens/details/Details";
 import Edit from "../screens/edit/Edit";
 import Businesses from "../screens/businesses/Businesses";
+import Layout from "../layout/Layout"
 
 const MainContainer = (props) => {
   const [allBusinesses, setAllBusinesses] = useState([]);
@@ -80,6 +81,7 @@ const MainContainer = (props) => {
   }
 
   return (
+    // <Layout currentUser={props.currentUser} handleLogout={props.handleLogout}> 
     <Switch>
       <Route path="/dashboard">
         <Dashboard currentUser={props.currentUser} allToDos={allToDos} deleteToDo={deleteToDo}/>
@@ -104,7 +106,8 @@ const MainContainer = (props) => {
       <Route path="/businesses">
         {props.currentUser ? <Businesses allBusinesses={allBusinesses} /> : <div>loading </div> }
       </Route>
-    </Switch>
+      </Switch>
+      // </Layout>
   );
 };
 
