@@ -7,7 +7,6 @@
   height: 100px;
   color: white;
   width: 45vw;
-  transition: 2s ease-in-out;
 }
 
 .todo-action {
@@ -57,7 +56,6 @@
 .todo-container {
   width: 45vw;
   background-color: #000000;
-  transition: 2s ease-in-out;
 }
 
 .to-do-container-label {
@@ -71,4 +69,46 @@
 .dashboard-container {
   display: flex;
   justify-content: center;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .dashboard-container {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .each-todo {
+    width: 98vw;
+  }
+  .todo-container {
+    width: 98vw;
+  }
+  .todo-business-info-container,
+  .todo-action {
+    width: 93vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .each-todo {
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction:column;
+     align-items: center;
+    color: white;
+    width: 98vw;
+    height: auto;
+    padding: 2px;
+  }
+  .todo-contact-info,
+  .todo-action,
+  .todo-business-info-container,
+  .todo-business-name {
+    font-size: 15px;
+  }
+  .delete-todo {
+    font-size: 20px;
+  }
 }

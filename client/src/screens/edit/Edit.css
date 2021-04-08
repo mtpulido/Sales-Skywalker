@@ -79,3 +79,49 @@ textarea {
   grid-area: B;
   margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 1300px) {
+  .form-edit-container {
+    width: 100vw;
+    height: auto;
+  }
+  .form-details-container {
+    grid-area: D;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 72vw;
+    height: auto;
+
+    /* padding-right: 200px; */
+  }
+  .notes-container-edit {
+    grid-area: N;
+    width: 27vw;
+    height: auto;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 5px;
+  }
+  .edit-notes-input {
+    height: 95%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .edit-notes-input,
+  .notes-container-edit {
+    display: none;
+  }
+  .form-details-container {
+    width: 98vw;
+    min-height: 100vh;
+  }
+  .edit-input {
+    width: 300px;
+  }
+  .form-edit-container {
+    width: 100vw;
+  }
+}

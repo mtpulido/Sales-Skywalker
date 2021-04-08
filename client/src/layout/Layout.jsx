@@ -6,8 +6,8 @@ const Layout = (props) => {
     <div className="layout">
       <div className="navigation-container">
         <div className="navigation-company-user">
-          <div>Lots of Sales Inc.</div>
-          {props.currentUser ? <div className='nav-name'>{props.currentUser.name}</div> : null}
+          <div>Lots of Sales Inc. </div>
+          {props.currentUser ? <div className='nav-name'>  { props.currentUser.name}</div> : null}
         </div>
         <Link to="/dashboard">
           <div className="navigation-dashboard">Dashboard</div>

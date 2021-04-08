@@ -5,3 +5,15 @@
   font-size: 20px;
   margin-left: 10px;
 }
+
+@media only screen and (max-width: 750px) {
+  .filter-input {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .filter-input {
+    width: 30vw;
+  }
+}

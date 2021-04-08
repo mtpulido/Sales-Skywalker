@@ -1,5 +1,4 @@
 .businesses-container {
-  /* filter: drop-shadow(0 0 5px rgb(90, 88, 88)); */
   margin-top: 10px;
 }
 
@@ -46,4 +45,61 @@ margin-bottom:2px;
   font-size: 55px;
   margin-left: 30px;
   padding-bottom: 7px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .businesses-labels {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .industry-label,
+  .clientstatus-label {
+    display: none;
+  }
+
+  .company-label {
+    width:35vw;
+  }
+  
+  .contact-label {
+    width:20vw;
+  }
+  
+  .phonenumber-label {
+    width:15vw;
+  }
+  
+  .email-label{
+    width:30vw;
+  }
+
+}
+
+@media only screen and (max-width: 750px) {
+  .phonenumber-label{
+    display: none;
+  }
+  
+  .email-label{
+    display: none;
+  }
+
+  .company-label {
+    width:65vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  
+  .contact-label {
+    width:35vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
 }

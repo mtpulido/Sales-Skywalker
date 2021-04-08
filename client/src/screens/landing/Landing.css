@@ -110,3 +110,58 @@ background-color: #000000;
   font-size: 20px;
   margin-top: 25px;
 }
+
+
+@media only screen and (max-width: 1520px) {
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    background-color: #131313;
+    overflow-y: scroll;
+    height: 2000px;
+  }
+
+  .landing-logo,
+  .sign-in-form,
+  .sign-up-form {
+    border: 2px solid white;
+    width: 40vw;
+  }
+  .sign-in-alignment {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+@media only screen and (max-width: 720px) {
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    background-color: #131313;
+    overflow-y: scroll;
+    height: 2000px;
+  }
+
+  .landing-logo,
+  .sign-in-form,
+  .sign-up-form {
+    border: 2px solid white;
+    width: 95vw;
+  }
+  .sign-in-alignment {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

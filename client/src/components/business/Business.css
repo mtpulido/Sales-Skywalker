@@ -1,8 +1,6 @@
 .business-prospects {
-  /* background-color: #454851; */
   display: flex;
   width: 80vw;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   background-color: #000000;
@@ -56,4 +54,88 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .business-prospects {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .industry-prospects,
+  .isclient-prospects {
+    display: none;
+  }
+
+  .name-prospects {
+    width:35vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  
+  .contact-prospects {
+    width:20vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  
+  .phone-prospects {
+    width:15vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  
+  .email-prospects{
+    width:30vw;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+
+@media only screen and (max-width: 750px) {
+  .phone-prospects {
+    width:15vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    display: none;
+  }
+  
+  .email-prospects{
+    width:30vw;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: none;
+  }
+
+  .name-prospects {
+    width:65vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  
+  .contact-prospects {
+    width:35vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
 }
