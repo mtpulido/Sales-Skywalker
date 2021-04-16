@@ -1,14 +1,18 @@
 .businesses-container {
   margin-top: 10px;
+  max-width: 100vw;
 }
 
 .businesses-labels {
 display: flex;
-width: 80vw;
-padding-left: 10px;
+width: 100vw;
+max-width: 1685px;
+
 color: white;
 font: 15px;
 margin-bottom:2px;
+padding: 0 20px;
+overflow-x: hidden;
 }
 
 .company-label {
@@ -38,6 +42,7 @@ margin-bottom:2px;
 .businesses-filter {
   display: flex;
   align-items: center;
+  max-width: 1685px;
 }
 
 .add-business-button {

@@ -4,7 +4,8 @@ label {
 
 .form-add-container {
   height: 100vh;
-  width: 80vw;
+  width: 100vw;
+  max-width: 1685px;
   display: flex;
   flex-direction: column;
   align-items: center;

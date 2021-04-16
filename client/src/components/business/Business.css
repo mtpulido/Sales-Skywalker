@@ -1,13 +1,14 @@
 .business-prospects {
   display: flex;
-  width: 80vw;
-  justify-content: center;
+  width: 100vw;
+  max-width: 1685px;
   align-items: center;
   background-color: #000000;
   border-bottom: 1px solid white;
   height: 60px;
   font-size: 20px;
-  padding-left: 10px;
+  padding: 0 20px;
+  overflow-x: hidden;
 }
 .business-prospects:hover {
   background-color: #454851;
@@ -57,69 +58,35 @@
 }
 
 
-@media only screen and (max-width: 1300px) {
-  .business-prospects {
-    width: 100vw;
-  }
-}
-
 @media only screen and (max-width: 1150px) {
   .industry-prospects,
   .isclient-prospects {
     display: none;
   }
-
-  .name-prospects {
+  .name-prospects  {
     width:35vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 15px;
   }
   
-  .contact-prospects {
+  .contact-prospects  {
     width:20vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 15px;
   }
   
   .phone-prospects {
     width:15vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 15px;
   }
   
   .email-prospects{
     width:30vw;
-    font-size: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
 }
 
-
 @media only screen and (max-width: 750px) {
-  .phone-prospects {
-    width:15vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 15px;
+  .phone-prospects{
     display: none;
   }
   
   .email-prospects{
-    width:30vw;
-    font-size: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: none;
   }
 

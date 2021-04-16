@@ -1,7 +1,6 @@
 import "./Dashboard.css";
 
 const Dashboard = (props) => {
-  console.log(props.allToDos);
   const toDoJSX = props.allToDos.map((toDo) => (
     <div className="each-todo">
       <div className="todo-action">{toDo.action}</div>

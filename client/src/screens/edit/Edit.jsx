@@ -132,7 +132,6 @@ const Edit = (props) => {
             name="notes"
             value={formData.notes}
             onChange={handleChange}
-            required={true}
           />
       </div>
       <div className="edit-button-container"><button className="add-button">Submit</button></div>

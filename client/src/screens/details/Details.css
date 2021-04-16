@@ -3,7 +3,8 @@
   grid-template-areas: 
   "I I N"
   "B B B";
-  width:80vw;
+  width:100vw;
+  max-width: 1685px;
   height: 100vh;
   background-color: #000000;
   filter: drop-shadow(0 0 5px rgb(90, 88, 88));
@@ -11,8 +12,8 @@
 
 .details-businessinfo-container {
   grid-area: I;
-  width: 55vw;
-  height: 81vh;
+  width: 70vw;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -22,8 +23,8 @@
 
 .details-notes-container {
   grid-area: N;
-  width: 22vw;
-  height: 84vh;
+  width: 30vw;
+  height: 70vh;
   border-left: 1px solid white;
   border-bottom: 1px solid white;
   color: white;
@@ -32,10 +33,10 @@
 
 .details-buttons-container {
   grid-area: B;
-  height: 15vh;
+  height: 20vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .details-buttons {

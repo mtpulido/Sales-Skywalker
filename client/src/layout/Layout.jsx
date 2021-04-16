@@ -10,14 +10,11 @@ const Layout = (props) => {
           {props.currentUser ? <div className='nav-name'>  { props.currentUser.name}</div> : null}
         </div>
         <Link to="/dashboard">
-          <div className="navigation-dashboard">Dashboard</div>
+          <div className="navigation-dashboard">To Dos</div>
         </Link>
         <Link to="/businesses">
           <div className="navigation-prospects">Prospects</div>
         </Link>
-        {/* <Link to="/clients">
-          <div className="navigation-client">Clients</div>
-        </Link> */}
         <div className="navigation-signout" onClick={props.handleLogout}>Sign Out</div>
       </div>
       <div className="layout-children">{props.children}</div>

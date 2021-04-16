@@ -1,15 +1,26 @@
-.navigation-container {
-  height: 100vh;
-  width: 20vw;
+.layout {
+  background-color: white;;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  border-right: white 1px solid;
+}
+
+
+.navigation-container {
+  height: 100px;
+  width: 100vw;
+  max-width: 1685px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   left: 0;
   background-color: #000000;
   color: white;
   z-index: 2;
+  overflow-x: hidden;
+  filter: drop-shadow(0 1px 1px rgb(255, 255, 255));
 }
 
 a {
@@ -17,24 +28,17 @@ a {
   color: #0083E3;
 }
 
-.layout {
-  display: flex;
-}
-
 .layout-children {
-  /* border: green 5px solid; */
-  width: 80vw;
+  width: 100vw;
+  max-width: 1685px;
   background-color: #131313;
   overflow-x: hidden;
-   /* display: flex; */
-  /* justify-content: center; 
-  align-items: center;  */
 }
 
 .navigation-company-user {
-  border-bottom: 1px solid white;
-  font-size: 40px;
+  font-size: 35px;
   padding-left: 10px;
+  padding-left: 25px;
 }
 
 .nav-name {
@@ -50,61 +54,28 @@ a {
 }
 
 .navigation-signout {
-  padding-left: 10px;
   font-size: 30px;
   color: #0083E3;
+  padding-right: 25px;
 }
 
 .navigation-signout:hover {
   cursor: pointer;
 }
 
-
-@media only screen and (max-width: 1300px) {
-  .navigation-container {
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: white 1px solid;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: #000000;
-    color: white
-  }
-  .navigation-company-user {
-    border-bottom: none;
-    display: flex;
-    font-size: 30px;
-    padding-left: 10px;
-  }
-
-  .layout {
-    display: flex;
-    flex-direction: column;
-  }
+@media only screen and (max-width: 750px) {
+  .navigation-company-user,
   .nav-name {
-    font-size: 30px;
-  }
-  .layout-children{
-   width: 100vw;
-  background-color: #131313;
-  overflow-x: hidden;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .navigation-company-user {
     display: none;
   }
 
+  .navigation-signout,
   .navigation-dashboard,
-  .navigation-prospects,
-  .navigation-signout {
-    font-size: 20px;
+  .navigation-prospects {
+    font-size: 25px;
   }
-}
+  .navigation-signout {
+    padding: 0
+  }
 
+}

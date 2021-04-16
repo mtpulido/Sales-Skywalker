@@ -1,102 +1,65 @@
+.overall-container {
+  background-color: white;;
+  display: flex;
+  justify-content: center;
+  /* width: 100vw; */
+}
+
 .landing-container {
-  display: grid;
-  grid-template-areas: 
-  "L S"
-  "I V"
-  "U V";
+  display: flex;
+  min-height: 100vh;
   width: 100vw;
-  height: 100vh;
-  background-color: #131313;;
-  overflow-y: hidden;
+  justify-content: center;
+  max-width: 1685px;
+  background-color: #131313;
+}
+
+.landing-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid white;
+  width: 30vw;
 }
 
 .landing-logo {
-grid-area: L;
-width: 25vw;
-display: flex;
-justify-content: center;
-align-items: center;
-border-bottom: 2px solid white;
-border-right: 2px solid white;
-height: 16vh;
-font-size: 55px;
-color: white;
-background-color: #000000;
+  border-bottom: 1px solid white;
+  background-color:black;
+  width: 100%;
+  height: 10vh;
+  color: white;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sign-in-form {
-  grid-area: I;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25vw;
-  height: 42vh;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-  font-size: 20px;
-  color: white;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
 
+.form-label-landing {
+  width: 150px;
+  margin-bottom: 5px;
 }
 
 .sign-up-form {
-  grid-area: U;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25vw;
-  height: 44vh;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-  font-size: 20px;
-  color: white;
-
-}
-
-.landing-slogan {
-  grid-area: S;
-  font-size: 40px;
-  color: white;
-  width: 70vw;
-  display: flex;
   justify-content: center;
-  margin-top: 30px;
-  
-}
-
-.landing-video {
-  display: flex;
-  justify-content: center;
-  grid-area: V;
-  margin-top: 30px;
-  width: 69vw;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-}
-
-.landing-input {
-  margin-top: 10px;
-  height: 30px;
+  width: 100%;
 }
 
 .landing-label {
-  font-size: 35px;
-  padding-right: 35px;
-}
-
-.landing-label-signin {
-  font-size: 35px;
-  padding-right: 70px;
-}
-
-
-.sign-in-alignment {
-  margin-top: 50px;
-  margin-right: 35px;
-  width: 16vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 .landing-button {
@@ -108,60 +71,76 @@ background-color: #000000;
   justify-content: space-around;
   align-items: center;
   font-size: 20px;
-  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.landing-input {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.landing-video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+}
+.landing-video {
+  width: 85%;
+  height: 65%;
+}
+
+.password-error {
+  color: rgb(255, 7, 7);
+}
+
+@media only screen and (max-width: 1200px) {
+  .landing-logo {
+    font-size: 30px;
+  }
 }
 
 
-@media only screen and (max-width: 1520px) {
+@media only screen and (max-width: 915px) {
   .landing-container {
     display: flex;
     flex-direction: column;
+    align-items:center;
     width: 100vw;
-    align-items: center;
-    background-color: #131313;
-    overflow-y: scroll;
-    height: 2000px;
+    justify-content: center;
+    max-width: 1685px;
+    background-color: #131313;;
   }
 
-  .landing-logo,
-  .sign-in-form,
-  .sign-up-form {
-    border: 2px solid white;
-    width: 40vw;
-  }
-  .sign-in-alignment {
-    margin-top: 25px;
-    width: 100%;
+  .landing-sidebar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-}
-
-
-
-@media only screen and (max-width: 720px) {
-  .landing-container {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    align-items: center;
-    background-color: #131313;
-    overflow-y: scroll;
-    height: 2000px;
-  }
-
-  .landing-logo,
-  .sign-in-form,
-  .sign-up-form {
     border: 2px solid white;
+    width: 50vw;
+  }
+  .landing-video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 95vw;
+    height: 400px;
   }
-  .sign-in-alignment {
-    margin-top: 25px;
-    width: 100%;
+  .landing-video {
+    width: 85%;
+    height: 65%;
+  }
+
+}
+
+@media only screen and (max-width: 565px) {
+  .landing-sidebar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid white;
+    width: 98vw;
   }
 }
