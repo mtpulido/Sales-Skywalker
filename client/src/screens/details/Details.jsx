@@ -78,7 +78,6 @@ const Details = (props) => {
         <div>{oneBusiness?.notes}</div>
       </div>
       {props.currentUser.id === oneBusiness?.user_id ? <div className="details-buttons-container">
-        <div className="details-buttons">Meeting</div>
         <div
           className="details-buttons"
           onClick={() => props.createToDo(toDoCall)}

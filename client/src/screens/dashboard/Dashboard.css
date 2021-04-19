@@ -95,9 +95,9 @@
 @media only screen and (max-width: 550px) {
   .each-todo {
     border-bottom: 1px solid white;
-    display: flex;
+    /* display: flex;
     flex-direction:column;
-     align-items: center;
+     align-items: center; */
     color: white;
     width: 98vw;
     height: auto;

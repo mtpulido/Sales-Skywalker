@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 
@@ -32,6 +33,7 @@ a {
   width: 100vw;
   max-width: 1685px;
   background-color: #131313;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -75,7 +77,10 @@ a {
     font-size: 25px;
   }
   .navigation-signout {
-    padding: 0
+    padding-right: 25px;
+  }
+  .navigation-dashboard {
+    padding-left: 25px;
   }
 
 }

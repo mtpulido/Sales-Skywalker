@@ -5,7 +5,7 @@
   "B B B";
   width:100vw;
   max-width: 1685px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #000000;
   filter: drop-shadow(0 0 5px rgb(90, 88, 88));
   background-color: #000000;
@@ -15,23 +15,24 @@
   grid-area: D;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
   width: 70vw;
-  height: 60vh;
-  /* padding-right: 200px; */
+  height: 73vh;
+ padding-top: 20px;
 }
 
 .edit-label {
   margin-bottom: 10px;
   font-size: 20px;
   color: #0083E3;
+
 }
 
 .edit-input {
-  margin-top: 50px;
   width: 450px;
   height: 40px;
-  /* margin-bottom: 10px; */
+  margin-top: 10px;
   margin-right: 50px;
   font-size: 18px;
 }
@@ -74,7 +75,7 @@ textarea {
 
 .edit-button-container {
   height: 45px;
-  width: 89vw;
+  width: 67vw;
   display: flex;
   justify-content: center;
   grid-area: B;
@@ -90,11 +91,8 @@ textarea {
     grid-area: D;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: 72vw;
     height: auto;
-
-    /* padding-right: 200px; */
   }
   .notes-container-edit {
     grid-area: N;
@@ -108,6 +106,15 @@ textarea {
   .edit-notes-input {
     height: 95%;
   }
+
+  .edit-button-container {
+    height: 45px;
+    width: 67vw;
+    display: flex;
+    justify-content: center;
+    grid-area: B;
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -116,8 +123,9 @@ textarea {
     display: none;
   }
   .form-details-container {
-    width: 98vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: auto;
+    justify-content: start;
   }
   .edit-input {
     width: 300px;
@@ -125,4 +133,12 @@ textarea {
   .form-edit-container {
     width: 100vw;
   }
+.edit-button-container {
+  height: 45px;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  grid-area: B;
+  margin-bottom: 50px;
+}
 }

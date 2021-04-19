@@ -31,7 +31,7 @@ const Add = (props) => {
       
     }}  className='form-add-container'>
       <label className="add-label">
-        Company Name:
+        <div className="add-form-label">Company Name</div>
           <input
           className="add-input"
           type='text'
@@ -42,7 +42,7 @@ const Add = (props) => {
         />
       </label>
       <label className="add-label">
-        Contact:
+      <div className="add-form-label">Contact</div>
           <input
           className="add-input"
           type='text'
@@ -53,7 +53,7 @@ const Add = (props) => {
         />
       </label>
       <label className="add-label">
-        Phone #:
+      <div className="add-form-label">Phone#</div>
           <input
           className="add-input"
           type='text'
@@ -64,7 +64,7 @@ const Add = (props) => {
         />
       </label>
       <label className="add-label">
-        Email:
+      <div className="add-form-label">Email</div>
           <input
           className="add-input"
           type='text'
@@ -75,7 +75,7 @@ const Add = (props) => {
         />
       </label>
       <label className="add-label">
-        Address:
+      <div className="add-form-label">Address</div>
           <input
           className="add-input"
           type='text'
@@ -86,7 +86,7 @@ const Add = (props) => {
         />
         </label>
           <label className="add-label">
-        Industry:
+          <div className="add-form-label">Industry</div>
           <input
           className="add-input"
           type='text'

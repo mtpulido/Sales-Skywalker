@@ -3,8 +3,6 @@ label {
 }
 
 .form-add-container {
-  height: 100vh;
-  width: 100vw;
   max-width: 1685px;
   display: flex;
   flex-direction: column;
@@ -40,13 +38,13 @@ label {
 }
 
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 750px) {
 .form-add-container {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 100px;
-  padding-left: 15px;
+  padding-left: 50px;
 }
 }

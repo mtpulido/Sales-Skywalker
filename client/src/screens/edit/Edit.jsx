@@ -56,7 +56,7 @@ const Edit = (props) => {
     >
       <div className="form-details-container">
         <label className="edit-label">
-          Company Name:
+          <div className="edit-label-form">Company Name</div>
           <input
             className="edit-input"
             type="text"
@@ -67,7 +67,7 @@ const Edit = (props) => {
           />
         </label>
         <label className="edit-label">
-          Contact:
+        <div className="edit-label-form">Contact</div>
           <input
             className="edit-input"
             type="text"
@@ -78,7 +78,7 @@ const Edit = (props) => {
           />
         </label>
         <label className="edit-label">
-          Phone #:
+        <div className="edit-label-form">Phone#</div>
           <input
             className="edit-input"
             type="text"
@@ -89,7 +89,7 @@ const Edit = (props) => {
           />
         </label>
         <label className="edit-label">
-          Email:
+        <div className="edit-label-form">Email</div>
           <input
             className="edit-input"
             type="text"
@@ -100,7 +100,7 @@ const Edit = (props) => {
           />
         </label>
         <label className="edit-label">
-          Address:
+        <div className="edit-label-form">Address</div>
           <input
             className="edit-input"
             type="text"
@@ -111,7 +111,7 @@ const Edit = (props) => {
           />
         </label>
         <label className="edit-label">
-          Industry:
+        <div className="edit-label-form">Industry</div>
           <input
             className="edit-input"
             type="text"
