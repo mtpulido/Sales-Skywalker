@@ -19,6 +19,7 @@ const Details = (props) => {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchOneBusiness = async () => {
       const businessData = await getOneBusiness(id);
       setOneBusiness(businessData);

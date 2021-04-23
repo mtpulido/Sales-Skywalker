@@ -132,11 +132,11 @@ const Landing = (props) => {
         </form>
       </div>
           <div className="landing-video-container">
-      <iframe
+      {/* <iframe
           title="landing player"
           className="landing-video"
         src="https://www.youtube.com/embed/iqyf-kJWwIg"
-        ></iframe>
+        ></iframe> */}
         </div>
         </div>
     </div>
